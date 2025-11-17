@@ -25,6 +25,7 @@ group "Dependencies"
 		architecture "x64"
 		targetdir ("%{wks.location}/bin/" .. outputdir)
 		objdir ("%{wks.location}/bin-int/" .. tmpdir)
+		disablewarnings { "4996", "4005" }
 
 		files(_files)
 		includedirs(_includedirs)
